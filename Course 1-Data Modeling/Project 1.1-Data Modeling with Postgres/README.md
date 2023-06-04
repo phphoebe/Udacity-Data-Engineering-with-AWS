@@ -93,7 +93,7 @@ time
 ```
 * #### Entity Relationship Diagram (ERD)
 
-![](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS-ND/blob/master/Course%201-Data%20Modeling/Project%201.1-Data%20Modeling%20with%20Postgres/Sparkify%20ERD.png)
+![](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%201-Data%20Modeling/Project%201.1-Data%20Modeling%20with%20Postgres/Sparkify%20ERD.png)
 
 
 
