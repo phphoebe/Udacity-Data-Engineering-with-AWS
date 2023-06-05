@@ -77,7 +77,7 @@ aws s3 cp s3://udacity-dend/log_json_path.json sample_data/log_json_path.json
 
 ```
 staging_events 
-          - artist          PRIMARY KEY
+          - artist          
           - auth
           - firstName
           - gender
@@ -97,7 +97,7 @@ staging_events
           - userId
 
 staging_songs 
-          - artist_id        PRIMARY KEY
+          - artist_id        
           - artist_latitude
           - artist_location
           - artist_longitude
