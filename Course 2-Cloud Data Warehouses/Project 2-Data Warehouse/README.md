@@ -21,7 +21,7 @@ Creating resources on AWS using the AWS management console to support the Redshi
 #### 2. Create Security Group for Redshift
 * create a `redshift_security_group` security group that authorizes Redshift cluster access (with the default VPC)
 #### 3. Create an IAM User for Redshift
-* create an IAM user with below two permission policies attached, and create and save the `Access key` and `Security access key`:
+* create an IAM user with below two permission policies attached, and create and save the `Access key` and `Security access key`
     * `AmazonRedshiftFullAccess`
     * `AmazonS3ReadOnlyAccess`
 #### 4. Launch a Redshift Cluster
