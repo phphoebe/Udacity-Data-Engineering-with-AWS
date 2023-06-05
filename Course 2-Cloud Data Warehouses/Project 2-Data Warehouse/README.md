@@ -17,7 +17,7 @@ As the data engineer, we are tasked with building an ETL pipeline that extracts 
 
 ## Project Data Exploration
 
-* Using the AWS CLI to list bucket objects
+* Using the [AWS CLI S3 commands](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html) to list bucket objects
 
 ```
 aws configure
@@ -51,8 +51,11 @@ aws s3 cp s3://udacity-dend/log_json_path.json sample_data/log_json_path.json
 * `create_tables` - create tables
 
 2. Run `etl.py` to complete the ETL process using command `python3 etl.py`
-* `load_staging_tables` - load raw data from S3 buckets to Redshift staging tables
-* `insert_tables` - transforming staging tables to star-schema fact & dimension tables for song play analysis
+* `load_staging_tables` 
+    - load/copy raw data from S3 buckets to Redshift staging tables
+    - reference: [Using the COPY command to load from Amazon S3](https://docs.aws.amazon.com/redshift/latest/dg/t_loading-tables-from-s3.html)
+* `insert_tables` 
+    - transforming staging tables to star-schema fact & dimension tables for song play analysis
 
 ## Database Schema for Song Play Analysis
 

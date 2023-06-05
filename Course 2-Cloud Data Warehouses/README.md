@@ -38,5 +38,5 @@ Learn about AWS Services and how to set up Amazon S3, IAM, VPC, EC2, and RDS. Bu
 * Design optimized tables by selecting appropriate distribution styles and sorting keys 
 
 
-## Project - Data Warehouse
+## [Project - Cloud Data Warehouse](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse)
 Build an ETL pipeline that extracts data from S3, stages data in Redshift, and transforms data into a set of dimensional tables for an analytics team.
