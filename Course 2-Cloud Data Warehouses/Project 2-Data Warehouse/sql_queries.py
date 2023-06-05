@@ -197,7 +197,7 @@ time_table_insert = ("""
         EXTRACT(year FROM start_time) AS year,
         EXTRACT(weekday FROM start_time) AS weekday
     FROM staging_events
-    WHERE page = 'NextSong' AND ts IS NOT NULL
+    WHERE ts IS NOT NULL
 """)
 
 # QUERY LISTS
