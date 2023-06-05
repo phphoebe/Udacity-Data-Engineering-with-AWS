@@ -12,7 +12,7 @@ As the data engineer, we are tasked with building an ETL pipeline that extracts 
 ### Tools used
 * Python, SQL
 * Juypter Notebook
-* AWS Services (Redshift, S3, EC2, IAM, VPC | CLI, Boto3)
+* AWS Services (Redshift, S3, EC2, IAM, VPC, Boto3, CLI)
 
 
 ## Project Data Exploration
