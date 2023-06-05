@@ -45,10 +45,90 @@ aws s3 cp s3://udacity-dend/log_json_path.json sample_data/log_json_path.json
 ### ETL Pipeline
 
 
-### Database Schema
+### Database Schema for Song Play Analysis
 
-* **Staging Tables**
+* #### Staging Tables 
 
-* **Fact Table**
+```
+staging_events 
+          - artist          PRIMARY KEY
+          - auth
+          - firstName
+          - gender
+          - itemInSession
+          - lastName
+          - length
+          - level
+          - location
+          - method
+          - page
+          - registration
+          - sessionId
+          - song
+          - status
+          - ts
+          - userAgent
+          - userId
 
-* **Dimension Tables**
+staging_songs 
+          - artist_id        PRIMARY KEY
+          - artist_latitude
+          - artist_location
+          - artist_longitude
+          - artist_name
+          - duration
+          - num_songs
+          - song_id
+          - title
+          - year
+```
+* #### Fact Table 
+
+
+```
+songplays 
+          - songplay_id       PRIMARY KEY
+          - start_time
+          - user_id
+          - level
+          - song_id
+          - artist_id
+          - session_id
+          - duration
+          - user_agent
+```
+* #### Dimension Tables 
+
+```
+users 
+          - user_id           PRIMARY KEY
+          - first_name
+          - last_name
+          - gender
+          - level
+
+songs 
+          - song_id           PRIMARY KEY
+          - title
+          - artist_id
+          - year
+          - duration
+
+artists 
+          - artist_id         PRIMARY KEY
+          - name
+          - location
+          - latitude
+          - longitude
+
+time 
+          - start_time        PRIMARY KEY
+          - hour
+          - day
+          - week
+          - month
+          - year
+          - weekday
+```
+
+> ***NOTE:** Make sure to delete the cluster each time finish working to avoid large, unexpected costs*
