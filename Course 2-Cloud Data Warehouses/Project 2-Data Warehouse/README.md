@@ -25,7 +25,7 @@ Creating resources on AWS using the AWS management console to support the Redshi
     * `AmazonRedshiftFullAccess`
     * `AmazonS3ReadOnlyAccess`
 #### 4. Launch a Redshift Cluster
-* create the `redshift-cluster-1` cluster that attaches the `myRedshiftRole` IAM role and the `redshift_security_group` security group 
+* create the `redshift-cluster-1` cluster that attaches the `myRedshiftRole` role and the `redshift_security_group` security group 
 
 > ***NOTE:** Make sure to delete the cluster each time finish working to avoid large, unexpected costs*
 
