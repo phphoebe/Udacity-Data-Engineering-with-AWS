@@ -43,7 +43,7 @@ aws s3 cp s3://udacity-dend/log_json_path.json sample_data/log_json_path.json
 
 ## ETL Pipeline
 
-* [etl_test.ipynb](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse/etl_test.ipynb) - test AWS Configurations and the ETL process 
+* [etl_test.ipynb](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse/etl_test.ipynb) - test AWS Configurations and the ETL process, including validation and example analytical queries
 * [sql_queries.py](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse/sql_queries.py) - a collection of SQL queries for `create_tables.py` and `etl.py`
 
 1. Run [create_tables.py](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse/create_tables.py) to create Staging, Fact and Dimension table schema using command `python3 create_tables.py`
