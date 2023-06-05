@@ -33,7 +33,7 @@ Create cloud-based data warehouses. Sharpen data warehousing skills, deepen unde
 4. Implementing Data Warehouses on AWS
 
 ### Project
-* Project 2 - Data Warehouse
+* [Project 2 - Cloud Data Warehouse](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse)
 
 
 ## [Course 3 - Spark & Data Lakes](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%203-Spark%20and%20Data%20Lakes)

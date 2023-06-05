@@ -15,8 +15,7 @@ As the data engineer, we are tasked with building an ETL pipeline that extracts 
 * AWS Services (Redshift, S3, EC2, IAM, VPC)
 
 
-## Project Summary
-### Data Exploration
+## Project Data Exploration
 
 * Using the AWS CLI to list bucket objects
 
@@ -42,12 +41,22 @@ aws s3 cp s3://udacity-dend/log_data/2018/11/2018-11-30-events.json sample_data/
 aws s3 cp s3://udacity-dend/log_json_path.json sample_data/log_json_path.json
 ```
 
-### ETL Pipeline
+## ETL Pipeline
 
+* `etl_test.ipynb` - test AWS Configurations and the ETL process 
+* `sql_queries.py` - a collection of SQL queries for `create_tables.py` and `etl.py`
 
-### Database Schema for Song Play Analysis
+1. Run `create_tables.py` to create Staging, Fact and Dimension table schema using command `python3 create_tables.py`
+* `drop_tables` - drop table if exists 
+* `create_tables` - create tables
 
-* #### Staging Tables 
+2. Run `etl.py` to complete the ETL process using command `python3 etl.py`
+* `load_staging_tables` - load raw data from S3 buckets to Redshift staging tables
+* `insert_tables` - transforming staging tables to star-schema fact & dimension tables for song play analysis
+
+## Database Schema for Song Play Analysis
+
+* ### Staging Tables 
 
 ```
 staging_events 
@@ -82,7 +91,7 @@ staging_songs
           - title
           - year
 ```
-* #### Fact Table 
+* ### Fact Table 
 
 
 ```
@@ -97,7 +106,7 @@ songplays
           - duration
           - user_agent
 ```
-* #### Dimension Tables 
+* ### Dimension Tables 
 
 ```
 users 
