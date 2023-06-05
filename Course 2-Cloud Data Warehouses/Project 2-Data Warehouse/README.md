@@ -43,14 +43,14 @@ aws s3 cp s3://udacity-dend/log_json_path.json sample_data/log_json_path.json
 
 ## ETL Pipeline
 
-* `etl_test.ipynb` - test AWS Configurations and the ETL process 
-* `sql_queries.py` - a collection of SQL queries for `create_tables.py` and `etl.py`
+* [etl_test.ipynb](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse/etl_test.ipynb) - test AWS Configurations and the ETL process 
+* [sql_queries.py](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse/sql_queries.py) - a collection of SQL queries for `create_tables.py` and `etl.py`
 
-1. Run `create_tables.py` to create Staging, Fact and Dimension table schema using command `python3 create_tables.py`
+1. Run [create_tables.py](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse/create_tables.py) to create Staging, Fact and Dimension table schema using command `python3 create_tables.py`
 * `drop_tables` - drop table if exists 
 * `create_tables` - create tables
 
-2. Run `etl.py` to complete the ETL process using command `python3 etl.py`
+2. Run [etl.py](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse/etl.py) to complete the ETL process using command `python3 etl.py`
 * `load_staging_tables` 
     - load/copy raw data from S3 buckets to Redshift staging tables
     - reference: [Using the COPY command to load from Amazon S3](https://docs.aws.amazon.com/redshift/latest/dg/t_loading-tables-from-s3.html)
