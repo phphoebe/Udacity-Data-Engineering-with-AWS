@@ -14,6 +14,20 @@ As the data engineer, we are tasked with building an ETL pipeline that extracts 
 * Juypter Notebook
 * AWS Services (Redshift, S3, EC2, IAM, VPC, Boto3, CLI)
 
+## AWS Configuration
+Creating resources on AWS using the AWS management console to support the Redshift data warehouse. 
+#### 1. Create an IAM Role
+* create a `myRedshiftRole` IAM role with the `AmazonS3ReadOnlyAccess` permission policy attached
+#### 2. Create Security Group for Redshift
+* create a `redshift_security_group` security group that authorizes Redshift cluster access (with the default VPC)
+#### 3. Create an IAM User for Redshift
+* create an IAM role with below two permission policies attached, and create and save the `Access key` and `Security access key`:
+    * `AmazonRedshiftFullAccess`
+    * `AmazonS3ReadOnlyAccess`
+#### 4. Launch a Redshift Cluster
+* create and configure the `redshift-cluster-1` cluster attach the `myRedshiftRole` IAM role and the `redshift_security_group` security group 
+
+> ***NOTE:** Make sure to delete the cluster each time finish working to avoid large, unexpected costs*
 
 ## Project Data Exploration
 
@@ -143,4 +157,35 @@ time
           - weekday
 ```
 
-> ***NOTE:** Make sure to delete the cluster each time finish working to avoid large, unexpected costs*
+## Setup & Run Jupyter Notebooks in VS Code w/ Virtual Env & Kernels
+
+* create a virtual environment
+  ```
+  python3 -m venv udacity-dend 
+  ```
+* activate the virtual env
+  ```
+  source udacity-dend/bin/activate
+  ```
+* Installation 
+
+  ```
+  pip install jupyterlab
+  
+  pip install ipykernel
+  ```
+  _Validate that the install has succeeded by running `jupyter-lab` from your command line. A new tab should open in your browser, with the JupyterLab application running._
+  
+  * install useful Python packages in this virtual env
+  
+
+  ```
+  pip install boto3
+  pip install psycopg2
+  ```
+  
+* register the new virtual env with Jupyter so that you can use it within JupyterLab
+
+    ```
+    python3 -m ipykernel install --name =‘udacity-dend‘ --user
+    ```
