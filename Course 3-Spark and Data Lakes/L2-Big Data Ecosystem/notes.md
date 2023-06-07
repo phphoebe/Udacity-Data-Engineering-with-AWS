@@ -257,20 +257,3 @@ The key difference between data lakes and data lakehouse architectures is the in
 This is the crucial ingredient that provides atomicity, data quality, and consistency for the underlying data lake.
 
 ---
-
-## 3 - Spark Essentials
-
-
----
-
-## 4 - Using Spark in AWS
-
-
----
-
-## 5 - Ingesting and Organizing Data in a Lakehouse 
-
-
----
-
-## Project 3 - STEDI Human Balance Analytics
