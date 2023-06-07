@@ -27,7 +27,7 @@ Tools will be used:
 * The modern big data ecosystem is an evolution of **data processing** on **distributed architecture** necessary to handle the sheer volume of data.
 * Data Engineers skillfully use modern tools and techniques to create the big data ecosystem.
 
-### Evolution of Big Data Ecoystem
+### 2.1 - Evolution of Big Data Ecoystem
 
 <figure>
   <img src="images/2-1_evolution_of_big_data_ecosystem.png" width=60% height=60%>
@@ -50,13 +50,15 @@ Tools will be used:
 * Finally, the lastest step in the evolution is the **Lakehouse Architecutre**
     * seeks to combine the strength of both data lakes and **data warehouses**
 
-### Lesson Objectives
+## 2.2 - Lesson Objectives
+Get an overview of the big data engineering ecosystem that includes distributed file systems and processing, Hadoop, MapReduce, Spark, data lakes, and lakehouse architecture
+
 _By the end of this lesson, you will be able to:_
 * Identify technologies and components of the Hadoop framework
 * Explain what Spark is, and when to use it
 * Explain the features and evolution of data lakes in the big data ecosystem
 
-### From Hadoop to Data Lakehouse Architecture
+### 2.3 - From Hadoop to Data Lakehouse Architecture
 
 <figure>
   <img src="images/2-2_from_hadoop_to_data_lakehouse.png" width=80% height=80%>
@@ -75,7 +77,7 @@ Hadoop and Spark enabled the evolution of the data warehouse to the data lake.
 * Modern lakehouse architectures seek to combine the strengths of data warehouses and data lakes into a single, powerful architecture.
 
 
-### The Hadoop Ecosystem
+### 2.4 - The Hadoop Ecosystem
 
 #### Hadoop Framework
 <figure>
@@ -111,7 +113,7 @@ As Hadoop matured, other tools were developed to make Hadoop easier to work with
     * [Apache Storm](https://storm.apache.org/)
     * [Apache Flink](https://flink.apache.org/)
 
-### MapReduce
+### 2.5 - MapReduce
 
 MapReduce is a programming technique for manipulating large data sets. "Hadoop MapReduce" is a specific implementation of this programming technique.
 
@@ -120,17 +122,17 @@ The technique works by first dividing up a large dataset and distributing the da
 * `SHUFFLE` - Then these key-value pairs are shuffled across the cluster so that all keys are on the same machine. 
 * `REDUCE` - In the reduce step, the values with the same keys are combined (aggregated) together.
 
-**Exercise 1**: [MapReduce](exercises/1-mapreduce_practice.ipynb)
+**2.6 - Exercise 1**: [MapReduce](exercises/1-mapreduce_practice.ipynb)
 
 
-### Why Spark?
+### 2.7 - Why Spark?
 Spark is currently one of the most popular tools for big data analytics. 
 
 There are many other big data tools and systems, each with its own use case. For example:
 * database system: [Apache Cassandra](https://cassandra.apache.org/_/index.html)
 * SQL query engine: [Presto](https://prestodb.io/)
 
-### Spark Cluster
+### 2.8 - The Spark Cluster
 
 Distributed computing 
 * refer to a big computational job executing across a cluster of nodes
@@ -159,7 +161,7 @@ Four different modes to set up Spark: `Local mode` + `Standalone` + `YARN` + `Me
         * Mesos - another open-source manager from UC Berkeley's AMPLab Coordinators
 
 
-### Spark Use Cases
+### 2.9 - Spark Use Cases
 Resources about different Spark use cases:
 * [Data Analytics](https://spark.apache.org/sql/) - Spark SQL is Apache Spark's module for working with structured data
 * [Machine Learning](https://spark.apache.org/mllib/) - MLlib is Apache Spark's scalable machine learning library
@@ -180,7 +182,7 @@ Resources about different Spark use cases:
     * distributed SQL engines like [Impala](https://impala.apache.org/) and [Presto](https://prestodb.io/)
 
 
-### Data Lakes
+### 2.10 - Data Lakes
 Data lakes are an evolution beyond data warehouses and allow an organization to ingest massive amounts of both **structured** and **unstructured** data into storage.
 
 <figure>
@@ -197,13 +199,11 @@ One of the key differences between data warehouses and data lakes is the inclusi
   <img src="images/2-6_key_features_of_data_lakes.png" width=50% height=50%>
 </figure>
 
-
-
 * Lower costs associated with using big data tools for ETL / ELT operations.
 * Data lakes provide schema-on-read rather than schema-on-write which lowers the cost and work of ingesting large amounts of data.
 * Data lakes provide support for structured, semi-structured, and unstructured data.
 
-### Data Lakes, Lakehouse, and Spark
+### 2.11 - Data Lakes, Lakehouse, and Spark
 Depending on what you are doing, Apache Spark can fill all three of these roles: 
 * Data engineering tool
 * Data analytics tool
@@ -221,7 +221,7 @@ Depending on what you are doing, Apache Spark can fill all three of these roles:
 * Apache Spark allows the data engineer to perform these tasks, along with raw data ingestion using the language of their choice with support for Python, R, SQL, Scala, and Java.
 
 
-### Data Lakehouse
+### 2.12 - Data Lakehouse
 Data lakes were a huge step forward from data warehouses but some of their key features led to weaknesses. With the need to ingest a large amount of unstructured data, we _lost_:
 * Atomic transactions: failed production jobs left data in a corrupted state.
 * Quality enforcement: inconsistent and therefore unusable data.
@@ -257,3 +257,20 @@ The key difference between data lakes and data lakehouse architectures is the in
 This is the crucial ingredient that provides atomicity, data quality, and consistency for the underlying data lake.
 
 ---
+
+## 3 - Spark Essentials
+
+
+---
+
+## 4 - Using Spark in AWS
+
+
+---
+
+## 5 - Ingesting and Organizing Data in a Lakehouse 
+
+
+---
+
+## Project 3 - STEDI Human Balance Analytics
