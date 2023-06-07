@@ -59,7 +59,7 @@ _By the end of this lesson, you will be able to:_
 ### From Hadoop to Data Lakehouse Architecture
 
 <figure>
-  <img src="images/2-2_from_hadoop_to_data_lakehouse.png" width=60% height=60%>
+  <img src="images/2-2_from_hadoop_to_data_lakehouse.png" width=80% height=80%>
 </figure>
 
 Hadoop and Spark enabled the evolution of the data warehouse to the data lake.
@@ -184,7 +184,7 @@ Resources about different Spark use cases:
 Data lakes are an evolution beyond data warehouses and allow an organization to ingest massive amounts of both **structured** and **unstructured** data into storage.
 
 <figure>
-  <img src="images/2-5_evolution_from_hadoop_to_data_lakehouses.png" width=70% height=70%>
+  <img src="images/2-5_evolution_from_hadoop_to_data_lakehouses.png" width=80% height=80%>
 </figure>
 
 One of the key differences between data warehouses and data lakes is the inclusion of structured versus unstructured data.
@@ -213,7 +213,7 @@ Depending on what you are doing, Apache Spark can fill all three of these roles:
 #### Apache Spark, Data Lakes, and Lakehouse
 
 <figure>
-  <img src="images/2-7_apache_spark_datalakes_and_lakehouse.png" width=70% height=70%>
+  <img src="images/2-7_apache_spark_datalakes_and_lakehouse.png" width=80% height=80%>
 </figure>
 
 * Apache Spark can be used to perform data engineering tasks for building both `data lakes` and `lakehouse architectures`.
@@ -233,7 +233,7 @@ These shortcomings led the industry to seek better solutions.
 The key innovation of the lakehouse architecture is the creation of a `metadata` and `data governance` layer on top of the data lake.
 
 <figure>
-  <img src="images/2-8_lakehouse_architecture.png" width=60% height=60%>
+  <img src="images/2-8_lakehouse_architecture.png" width=80% height=80%>
 </figure>
 
 * This creates a pool of raw data as well as a curated set of data.
