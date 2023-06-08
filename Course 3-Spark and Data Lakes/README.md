@@ -2,10 +2,10 @@
 Learn about the big data ecosystem and how to use Spark to work with massive datasets. 
 Learn about how to store big data in a data lake and query it with Spark
 
-## [Lesson 1 - Introduction to Spark and Data Lakes](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Course%203-Spark%20and%20Data%20Lakes/L2-Big%20Data%20Ecosystem/notes.md)
+## [Lesson 1 - Introduction to Spark and Data Lakes](./L2-Big%20Data%20Ecosystem/README.md)
 Learn how Spark evaluates code and uses distributed computing to process and transform data. Work in the big data ecosystem to build data lakes and data lakehouses. 
 
-## [Lesson 2 - Big Data Ecosystem, Data Lakes & Spark](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%203-Spark%20and%20Data%20Lakes/L2-Big%20Data%20Ecosystem)
+## [Lesson 2 - Big Data Ecosystem, Data Lakes & Spark](./L2-Big%20Data%20Ecosystem/)
 Learn about the problems that Apache Spark is designed to solve. Learn about the greater Big Data ecosystem and how Spark fits into it. 
 * Identify what consititues the big data ecosystem for data engineering 
 * Explain the purpose and evolution of data lakes in the big data ecosystem 
@@ -13,7 +13,7 @@ Learn about the problems that Apache Spark is designed to solve. Learn about the
 * Identify when to use Spark and when not to use it
 * Describe the features of lakehouse architecture 
 
-## Lesson 3 - Spark Essentials 
+## [Lesson 3 - Spark Essentials](./L3-Spark%20Essentials/)
 Dive into how to use Spark for wrangling, filtering, and transforming distributed data with PySpark and Spark SQL 
 * Wrangle data with Spark and functional programming to scale across distributed systems
 * Process data with Spark DataFrames and Spark SQL

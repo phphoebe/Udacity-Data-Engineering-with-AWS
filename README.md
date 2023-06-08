@@ -19,11 +19,11 @@ Create **Relational** and **NoSQL** data models to fit the diverse needs of data
 3. NoSQL Data Models
 
 ### Projects
-* [Project 1.1 - Data Modeling with Postgres](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%201-Data%20Modeling/Project%201.1-Data%20Modeling%20with%20Postgres)
-* [Project 1.2 - Data Modeling with Apache Cassandra](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%201-Data%20Modeling/Project%201.2-Data%20Modeling%20with%20Apache%20Cassandra)
+* [Project 1.1 - Data Modeling with Postgres](./Course%201-Data%20Modeling/Project%201.1-Data%20Modeling%20with%20Postgres/)
+* [Project 1.2 - Data Modeling with Apache Cassandra](./Course%201-Data%20Modeling/Project%201.2-Data%20Modeling%20with%20Apache%20Cassandra/)
 
 
-## [Course 2 - Cloud Data Warehouses](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%202-Cloud%20Data%20Warehouses)
+## [Course 2 - Cloud Data Warehouses](./Course%202-Cloud%20Data%20Warehouses/)
 Create cloud-based data warehouses. Sharpen data warehousing skills, deepen understanding of data infrastructure, and be introduced to data engineering on the cloud using `Amazon Web Services (AWS)`.
 
 ### Lessons
@@ -33,10 +33,10 @@ Create cloud-based data warehouses. Sharpen data warehousing skills, deepen unde
 4. Implementing Data Warehouses on AWS
 
 ### Project
-* [Project 2 - Cloud Data Warehouse](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse)
+* [Project 2 - Cloud Data Warehouse](./Course%202-Cloud%20Data%20Warehouses/Project%202-Data%20Warehouse/)
 
 
-## [Course 3 - Spark & Data Lakes](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%203-Spark%20and%20Data%20Lakes)
+## [Course 3 - Spark & Data Lakes](./Course%203-Spark%20and%20Data%20Lakes/)
 Build a data lake on AWS and a data catalog following the principles of data lakehouse architecture. Learn about the big data ecosystem and the power of Apache Spark for data wrangling and transformation. Work with AWS data tools and services to extract, load, process, query, and transform semi-structured data in data lakes.
 
 ### Lessons
@@ -49,7 +49,7 @@ Build a data lake on AWS and a data catalog following the principles of data lak
 * Project 3 - STEDI Human Balance Analytics
 
 
-## [Course 4 - Automoate Data Pipelines](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%204-Automate%20Data%20Pipelines)
+## [Course 4 - Automoate Data Pipelines](./Course%204-Automate%20Data%20Pipelines/)
 Dive into the concept of data pipelines. 
 * Focus on applying the data pipeline concepts learn through Apache Airflow - concepts covered including data validation, DAGs, and Airflow. 
 * Venture into AWS quality concepts like copying S3 data, connections and hooks, and Redshift Serverless. 
@@ -67,4 +67,4 @@ Dive into the concept of data pipelines.
 * Project 4 - Data Pipelines with Airflow
 
 
-[Program Syllabus](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/blob/main/Data%2BEngineering%2BNanodegree%2BProgram%2BSyllabus.pdf), more information about this program can be found by visiting [Udacity Data Engineering ND](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
+[Program Syllabus](./Data%2BEngineering%2BNanodegree%2BProgram%2BSyllabus.pdf), more information about this program can be found by visiting [Udacity Data Engineering ND](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
