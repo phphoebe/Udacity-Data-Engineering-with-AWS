@@ -190,5 +190,5 @@ time
 * register the new virtual env with Jupyter so that you can use it within JupyterLab
 
     ```
-    python3 -m ipykernel install --name =‘udacity-dend‘ --user
+    python3 -m ipykernel install --user --name=‘udacity-dend‘ 
     ```
