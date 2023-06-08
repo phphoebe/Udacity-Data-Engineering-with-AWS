@@ -1,4 +1,4 @@
-# Spark and Data Lakes
+# Spark and Data Lakes (Course Notes)
 
 ## 1 - Introduction to Spark and Data Lakes
 
