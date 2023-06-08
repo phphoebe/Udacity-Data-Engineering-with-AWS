@@ -10,7 +10,7 @@ Design data models, build data warehouses and data lakes, automate data pipeline
 * Develop proficiency in Spark, Airflow, and AWS tools
 
 
-## [Course 1 - Data Modeling](https://github.com/phphoebe/Udacity-Data-Engineering-with-AWS/tree/main/Course%201-Data%20Modeling) 
+## [Course 1 - Data Modeling](./Course%201-Data%20Modeling/) 
 Create **Relational** and **NoSQL** data models to fit the diverse needs of data consumers. Use ETL to build databases in **PostgreSQL** and **Apache Cassandra**.
 
 ### Lessons
