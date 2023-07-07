@@ -20,9 +20,10 @@
   source spark-test/bin/activate
   ```
   
-* install PySpark 
+* install PySpark & other useful packages
   ```
   pip install pyspark
+  pip install mrjob
   ```
   
 ## Setup PySpark and Jupyter Notebook
