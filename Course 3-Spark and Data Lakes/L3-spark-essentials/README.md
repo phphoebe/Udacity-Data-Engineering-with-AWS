@@ -24,6 +24,9 @@
   ```
   pip install pyspark
   pip install mrjob
+  pip install numpy
+  pip install pandas
+  pip install matplotlib
   ```
   
 ## Setup PySpark and Jupyter Notebook
