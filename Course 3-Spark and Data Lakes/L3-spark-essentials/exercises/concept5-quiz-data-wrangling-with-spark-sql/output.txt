@@ -1,0 +1,137 @@
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/07/10 16:47:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+root
+ |-- artist: string (nullable = true)
+ |-- auth: string (nullable = true)
+ |-- firstName: string (nullable = true)
+ |-- gender: string (nullable = true)
+ |-- itemInSession: long (nullable = true)
+ |-- lastName: string (nullable = true)
+ |-- length: double (nullable = true)
+ |-- level: string (nullable = true)
+ |-- location: string (nullable = true)
+ |-- method: string (nullable = true)
+ |-- page: string (nullable = true)
+ |-- registration: long (nullable = true)
+ |-- sessionId: long (nullable = true)
+ |-- song: string (nullable = true)
+ |-- status: long (nullable = true)
+ |-- ts: long (nullable = true)
+ |-- userAgent: string (nullable = true)
+ |-- userId: string (nullable = true)
+
++-------------+---------+---------+------+-------------+--------+---------+-----+--------------------+------+--------+-------------+---------+--------------------+------+-------------+--------------------+------+
+|       artist|     auth|firstName|gender|itemInSession|lastName|   length|level|            location|method|    page| registration|sessionId|                song|status|           ts|           userAgent|userId|
++-------------+---------+---------+------+-------------+--------+---------+-----+--------------------+------+--------+-------------+---------+--------------------+------+-------------+--------------------+------+
+|Showaddywaddy|Logged In|  Kenneth|     M|          112|Matthews|232.93342| paid|Charlotte-Concord...|   PUT|NextSong|1509380319284|     5132|Christmas Tears W...|   200|1513720872284|"Mozilla/5.0 (Win...|  1046|
+|   Lily Allen|Logged In|Elizabeth|     F|            7|   Chase|195.23873| free|Shreveport-Bossie...|   PUT|NextSong|1512718541284|     5027|       Cheryl Tweedy|   200|1513720878284|"Mozilla/5.0 (Win...|  1000|
++-------------+---------+---------+------+-------------+--------+---------+-----+--------------------+------+--------+-------------+---------+--------------------+------+-------------+--------------------+------+
+
++--------+
+|count(1)|
++--------+
+|   10000|
++--------+
+
++------+---------+--------+--------------------+
+|userID|firstname|    page|                song|
++------+---------+--------+--------------------+
+|  1046|  Kenneth|NextSong|Christmas Tears W...|
+|  1046|  Kenneth|NextSong|  Be Wary Of A Woman|
+|  1046|  Kenneth|NextSong|   Public Enemy No.1|
+|  1046|  Kenneth|NextSong|Reign Of The Tyrants|
+|  1046|  Kenneth|NextSong|      Father And Son|
+|  1046|  Kenneth|NextSong|               No. 5|
+|  1046|  Kenneth|NextSong|           Seventeen|
+|  1046|  Kenneth|    Home|                null|
+|  1046|  Kenneth|NextSong|          War on war|
+|  1046|  Kenneth|NextSong|   Killermont Street|
+|  1046|  Kenneth|NextSong|        Black & Blue|
+|  1046|  Kenneth|  Logout|                null|
+|  1046|  Kenneth|    Home|                null|
+|  1046|  Kenneth|NextSong|     Heads Will Roll|
+|  1046|  Kenneth|NextSong|Bleed It Out [Liv...|
+|  1046|  Kenneth|NextSong|              Clocks|
+|  1046|  Kenneth|NextSong|           Love Rain|
+|  1046|  Kenneth|NextSong|Ry Ry's Song (Alb...|
+|  1046|  Kenneth|NextSong|   The Invisible Man|
+|  1046|  Kenneth|NextSong|Catch You Baby (S...|
++------+---------+--------+--------------------+
+only showing top 20 rows
+
++----------------+
+|            page|
++----------------+
+|           About|
+|       Downgrade|
+|           Error|
+|            Help|
+|            Home|
+|           Login|
+|          Logout|
+|        NextSong|
+|   Save Settings|
+|        Settings|
+|Submit Downgrade|
+|  Submit Upgrade|
+|         Upgrade|
++----------------+
+
++-------------+---------+---------+------+-------------+--------+---------+-----+--------------------+------+--------+-------------+---------+--------------------+------+-------------+--------------------+------+----+
+|       artist|     auth|firstName|gender|itemInSession|lastName|   length|level|            location|method|    page| registration|sessionId|                song|status|           ts|           userAgent|userId|hour|
++-------------+---------+---------+------+-------------+--------+---------+-----+--------------------+------+--------+-------------+---------+--------------------+------+-------------+--------------------+------+----+
+|Showaddywaddy|Logged In|  Kenneth|     M|          112|Matthews|232.93342| paid|Charlotte-Concord...|   PUT|NextSong|1509380319284|     5132|Christmas Tears W...|   200|1513720872284|"Mozilla/5.0 (Win...|  1046|   6|
++-------------+---------+---------+------+-------------+--------+---------+-----+--------------------+------+--------+-------------+---------+--------------------+------+-------------+--------------------+------+----+
+
++----+--------------+                                                           
+|hour|plays_per_hour|
++----+--------------+
+|   0|           484|
+|   1|           430|
+|   2|           362|
+|   3|           295|
+|   4|           257|
+|   5|           248|
+|   6|           369|
+|   7|           375|
+|   8|           456|
+|   9|           454|
+|  10|           382|
+|  11|           302|
+|  12|           352|
+|  13|           276|
+|  14|           348|
+|  15|           358|
+|  16|           375|
+|  17|           249|
+|  18|           216|
+|  19|           228|
++----+--------------+
+only showing top 20 rows
+
+   hour  plays_per_hour                                                         
+0     0             484
+1     1             430
+2     2             362
+3     3             295
+4     4             257
+5     5             248
+6     6             369
+7     7             375
+8     8             456
+9     9             454
+10   10             382
+11   11             302
+12   12             352
+13   13             276
+14   14             348
+15   15             358
+16   16             375
+17   17             249
+18   18             216
+19   19             228
+20   20             251
+21   21             339
+22   22             462
+23   23             479
