@@ -1,0 +1,228 @@
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/07/10 14:07:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[Row(artist='Showaddywaddy', auth='Logged In', firstName='Kenneth', gender='M', itemInSession=112, lastName='Matthews', length=232.93342, level='paid', location='Charlotte-Concord-Gastonia, NC-SC', method='PUT', page='NextSong', registration=1509380319284, sessionId=5132, song='Christmas Tears Will Fall', status=200, ts=1513720872284, userAgent='"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36"', userId='1046'), Row(artist='Lily Allen', auth='Logged In', firstName='Elizabeth', gender='F', itemInSession=7, lastName='Chase', length=195.23873, level='free', location='Shreveport-Bossier City, LA', method='PUT', page='NextSong', registration=1512718541284, sessionId=5027, song='Cheryl Tweedy', status=200, ts=1513720878284, userAgent='"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36"', userId='1000'), Row(artist='Cobra Starship Featuring Leighton Meester', auth='Logged In', firstName='Vera', gender='F', itemInSession=6, lastName='Blackwell', length=196.20526, level='paid', location='Racine, WI', method='PUT', page='NextSong', registration=1499855749284, sessionId=5516, song='Good Girls Go Bad (Feat.Leighton Meester) (Album Version)', status=200, ts=1513720881284, userAgent='"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/7.0.6 Safari/537.78.2"', userId='2219'), Row(artist='Alex Smoke', auth='Logged In', firstName='Sophee', gender='F', itemInSession=8, lastName='Barker', length=405.99465, level='paid', location='San Luis Obispo-Paso Robles-Arroyo Grande, CA', method='PUT', page='NextSong', registration=1513009647284, sessionId=2372, song="Don't See The Point", status=200, ts=1513720905284, userAgent='"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36"', userId='2373'), Row(artist=None, auth='Logged In', firstName='Jordyn', gender='F', itemInSession=0, lastName='Jones', length=None, level='free', location='Syracuse, NY', method='GET', page='Home', registration=1513648531284, sessionId=1746, song=None, status=200, ts=1513720913284, userAgent='"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36"', userId='1747')]
+root
+ |-- artist: string (nullable = true)
+ |-- auth: string (nullable = true)
+ |-- firstName: string (nullable = true)
+ |-- gender: string (nullable = true)
+ |-- itemInSession: long (nullable = true)
+ |-- lastName: string (nullable = true)
+ |-- length: double (nullable = true)
+ |-- level: string (nullable = true)
+ |-- location: string (nullable = true)
+ |-- method: string (nullable = true)
+ |-- page: string (nullable = true)
+ |-- registration: long (nullable = true)
+ |-- sessionId: long (nullable = true)
+ |-- song: string (nullable = true)
+ |-- status: long (nullable = true)
+ |-- ts: long (nullable = true)
+ |-- userAgent: string (nullable = true)
+ |-- userId: string (nullable = true)
+
+23/07/10 14:07:56 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
++-------+-----------------+----------+---------+------+------------------+--------+-----------------+-----+------------+------+-------+--------------------+------------------+--------+-----------------+-------------------+--------------------+------------------+
+|summary|           artist|      auth|firstName|gender|     itemInSession|lastName|           length|level|    location|method|   page|        registration|         sessionId|    song|           status|                 ts|           userAgent|            userId|
++-------+-----------------+----------+---------+------+------------------+--------+-----------------+-----+------------+------+-------+--------------------+------------------+--------+-----------------+-------------------+--------------------+------------------+
+|  count|             8347|     10000|     9664|  9664|             10000|    9664|             8347|10000|        9664| 10000|  10000|                9664|             10000|    8347|            10000|              10000|                9664|             10000|
+|   mean|            461.0|      null|     null|  null|           19.6734|    null|249.6486587492506| null|        null|  null|   null|1.504695369588739...|         4436.7511|Infinity|         202.8984| 1.5137859954164E12|                null|1442.4413286423842|
+| stddev|            300.0|      null|     null|  null|25.382114916132608|    null|95.00437130781461| null|        null|  null|   null|  8.47314252131656E9|2043.1281541827561|     NaN|18.04179115450588|3.290828862357974E7|                null| 829.8909432082621|
+|    min|              !!!|     Guest|   Aakash|     F|                 0| Acevedo|          1.12281| free|Aberdeen, WA|   GET|  About|       1463503881284|                 9|      #1|              200|      1513720872284|"Mozilla/5.0 (Mac...|                  |
+|    max|ÃÂlafur Arnalds|Logged Out|     Zoie|     M|               163|  Zuniga|        1806.8371| paid|    Yuma, AZ|   PUT|Upgrade|       1513760702284|              7144|wingless|              404|      1513848349284|Mozilla/5.0 (comp...|               999|
++-------+-----------------+----------+---------+------+------------------+--------+-----------------+-----+------------+------+-------+--------------------+------------------+--------+-----------------+-------------------+--------------------+------------------+
+
++-------+-----------------+
+|summary|           length|
++-------+-----------------+
+|  count|             8347|
+|   mean|249.6486587492506|
+| stddev|95.00437130781461|
+|    min|          1.12281|
+|    max|        1806.8371|
++-------+-----------------+
+
+10000
++----------------+
+|            page|
++----------------+
+|           About|
+|       Downgrade|
+|           Error|
+|            Help|
+|            Home|
+|           Login|
+|          Logout|
+|        NextSong|
+|   Save Settings|
+|        Settings|
+|Submit Downgrade|
+|  Submit Upgrade|
+|         Upgrade|
++----------------+
+
++------+---------+--------+--------------------+
+|userId|firstname|    page|                song|
++------+---------+--------+--------------------+
+|  1046|  Kenneth|NextSong|Christmas Tears W...|
+|  1046|  Kenneth|NextSong|  Be Wary Of A Woman|
+|  1046|  Kenneth|NextSong|   Public Enemy No.1|
+|  1046|  Kenneth|NextSong|Reign Of The Tyrants|
+|  1046|  Kenneth|NextSong|      Father And Son|
+|  1046|  Kenneth|NextSong|               No. 5|
+|  1046|  Kenneth|NextSong|           Seventeen|
+|  1046|  Kenneth|    Home|                null|
+|  1046|  Kenneth|NextSong|          War on war|
+|  1046|  Kenneth|NextSong|   Killermont Street|
+|  1046|  Kenneth|NextSong|        Black & Blue|
+|  1046|  Kenneth|  Logout|                null|
+|  1046|  Kenneth|    Home|                null|
+|  1046|  Kenneth|NextSong|     Heads Will Roll|
+|  1046|  Kenneth|NextSong|Bleed It Out [Liv...|
+|  1046|  Kenneth|NextSong|              Clocks|
+|  1046|  Kenneth|NextSong|           Love Rain|
+|  1046|  Kenneth|NextSong|Ry Ry's Song (Alb...|
+|  1046|  Kenneth|NextSong|   The Invisible Man|
+|  1046|  Kenneth|NextSong|Catch You Baby (S...|
++------+---------+--------+--------------------+
+only showing top 20 rows
+
+[Row(artist='Showaddywaddy', auth='Logged In', firstName='Kenneth', gender='M', itemInSession=112, lastName='Matthews', length=232.93342, level='paid', location='Charlotte-Concord-Gastonia, NC-SC', method='PUT', page='NextSong', registration=1509380319284, sessionId=5132, song='Christmas Tears Will Fall', status=200, ts=1513720872284, userAgent='"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36"', userId='1046', hour='6')]
++----+-----+
+|hour|count|
++----+-----+
+|   0|  484|
+|   1|  430|
+|   2|  362|
+|   3|  295|
+|   4|  257|
+|   5|  248|
+|   6|  369|
+|   7|  375|
+|   8|  456|
+|   9|  454|
+|  10|  382|
+|  11|  302|
+|  12|  352|
+|  13|  276|
+|  14|  348|
+|  15|  358|
+|  16|  375|
+|  17|  249|
+|  18|  216|
+|  19|  228|
++----+-----+
+only showing top 20 rows
+
+10000
++------+
+|userId|
++------+
+|      |
+|    10|
+|   100|
+|  1000|
+|  1003|
+|  1005|
+|  1006|
+|  1017|
+|  1019|
+|  1020|
+|  1022|
+|  1025|
+|  1030|
+|  1035|
+|  1037|
+|   104|
+|  1040|
+|  1042|
+|  1043|
+|  1046|
++------+
+only showing top 20 rows
+
+9664
++------+---------+---------+------+-------------+--------+------+-----+--------------------+------+----------------+-------------+---------+----+------+-------------+--------------------+------+----+
+|artist|     auth|firstName|gender|itemInSession|lastName|length|level|            location|method|            page| registration|sessionId|song|status|           ts|           userAgent|userId|hour|
++------+---------+---------+------+-------------+--------+------+-----+--------------------+------+----------------+-------------+---------+----+------+-------------+--------------------+------+----+
+|  null|Logged In|    Kelly|     F|           24|  Newton|  null| paid|Houston-The Woodl...|   PUT|Submit Downgrade|1513283366284|     5931|null|   307|1513768454284|Mozilla/5.0 (Wind...|  1138|  19|
++------+---------+---------+------+-------------+--------+------+-----+--------------------+------+----------------+-------------+---------+----+------+-------------+--------------------+------+----+
+
++------+---------+--------+-----+--------------------+
+|userId|firstname|    page|level|                song|
++------+---------+--------+-----+--------------------+
+|  1138|    Kelly|    Home| paid|                null|
+|  1138|    Kelly|NextSong| paid| Everybody Everybody|
+|  1138|    Kelly|NextSong| paid|               Gears|
+|  1138|    Kelly|NextSong| paid|        Use Somebody|
+|  1138|    Kelly|NextSong| paid|Love Of My Life (...|
+|  1138|    Kelly|NextSong| paid|Down In The Valle...|
+|  1138|    Kelly|NextSong| paid|Treat Her Like A ...|
+|  1138|    Kelly|NextSong| paid|Everybody Thinks ...|
+|  1138|    Kelly|NextSong| paid|      Fourteen Wives|
+|  1138|    Kelly|NextSong| paid|   Love On The Rocks|
+|  1138|    Kelly|NextSong| paid|           Breakeven|
+|  1138|    Kelly|NextSong| paid|          Leaf House|
+|  1138|    Kelly|NextSong| paid|       NAISEN KANSSA|
+|  1138|    Kelly|NextSong| paid|  You're In My Heart|
+|  1138|    Kelly|NextSong| paid|Roll On Down The ...|
+|  1138|    Kelly|NextSong| paid|Plasticities (Remix)|
+|  1138|    Kelly|NextSong| paid|             Secrets|
+|  1138|    Kelly|NextSong| paid|               Hello|
+|  1138|    Kelly|NextSong| paid|    I Never Told You|
+|  1138|    Kelly|NextSong| paid|       Love Break Me|
++------+---------+--------+-----+--------------------+
+only showing top 20 rows
+
+Row(artist='Showaddywaddy', auth='Logged In', firstName='Kenneth', gender='M', itemInSession=112, lastName='Matthews', length=232.93342, level='paid', location='Charlotte-Concord-Gastonia, NC-SC', method='PUT', page='NextSong', registration=1509380319284, sessionId=5132, song='Christmas Tears Will Fall', status=200, ts=1513720872284, userAgent='"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36"', userId='1046', hour='6', downgraded=0)
++-----------------+---------+---------+------+-------------+--------+---------+-----+--------------------+------+--------+-------------+---------+--------------------+------+-------------+--------------------+------+----+----------+-----+
+|           artist|     auth|firstName|gender|itemInSession|lastName|   length|level|            location|method|    page| registration|sessionId|                song|status|           ts|           userAgent|userId|hour|downgraded|phase|
++-----------------+---------+---------+------+-------------+--------+---------+-----+--------------------+------+--------+-------------+---------+--------------------+------+-------------+--------------------+------+----+----------+-----+
+|  The Get Up Kids|Logged In| Veronica|     F|            0| Buckley|178.59873| free|Detroit-Warren-De...|   PUT|NextSong|1512966806284|     6676|             Overdue|   200|1513828388284|"Mozilla/5.0 (Mac...|    10|  11|         0|    0|
+|      OneRepublic|Logged In| Veronica|     F|            0| Buckley|224.67873| free|Detroit-Warren-De...|   PUT|NextSong|1512966806284|        9|             Secrets|   200|1513790894284|"Mozilla/5.0 (Mac...|    10|   1|         0|    0|
+|             null|Logged In|   Elijah|     M|            0|   Moore|     null| free|New Orleans-Metai...|   GET|    Home|1488073913284|     6316|                null|   200|1513839673284|"Mozilla/5.0 (Win...|   100|  15|         0|    0|
+|           Ayabie|Logged In|   Elijah|     M|            4|   Moore|244.71465| free|New Orleans-Metai...|   PUT|NextSong|1488073913284|     6040|                0010|   200|1513776308284|"Mozilla/5.0 (Win...|   100|  21|         0|    0|
+|             null|Logged In|   Elijah|     M|            3|   Moore|     null| free|New Orleans-Metai...|   GET|    Home|1488073913284|     6040|                null|   200|1513776194284|"Mozilla/5.0 (Win...|   100|  21|         0|    0|
+|       Velour 100|Logged In|   Elijah|     M|            2|   Moore|202.29179| free|New Orleans-Metai...|   PUT|NextSong|1488073913284|     6040|Clouds (Of Color ...|   200|1513775710284|"Mozilla/5.0 (Win...|   100|  21|         0|    0|
+|    Crystal Gayle|Logged In|   Elijah|     M|            1|   Moore|154.74893| free|New Orleans-Metai...|   PUT|NextSong|1488073913284|     6040|Don't It Make My ...|   200|1513775556284|"Mozilla/5.0 (Win...|   100|  21|         0|    0|
+|             null|Logged In|   Elijah|     M|            0|   Moore|     null| free|New Orleans-Metai...|   GET|    Home|1488073913284|     6040|                null|   200|1513775431284|"Mozilla/5.0 (Win...|   100|  21|         0|    0|
+|      OneRepublic|Logged In|   Elijah|     M|            1|   Moore|224.67873| free|New Orleans-Metai...|   PUT|NextSong|1488073913284|     5762|             Secrets|   200|1513750442284|"Mozilla/5.0 (Win...|   100|  14|         0|    0|
+|       Josh Rouse|Logged In|   Elijah|     M|            0|   Moore|228.93669| free|New Orleans-Metai...|   PUT|NextSong|1488073913284|     5762|                1972|   200|1513750214284|"Mozilla/5.0 (Win...|   100|  14|         0|    0|
+|       Lily Allen|Logged In|Elizabeth|     F|            7|   Chase|195.23873| free|Shreveport-Bossie...|   PUT|NextSong|1512718541284|     5027|       Cheryl Tweedy|   200|1513720878284|"Mozilla/5.0 (Win...|  1000|   6|         0|    0|
+|             null|Logged In|  Kendale|     F|            2|Robinson|     null| free|San Diego-Carlsba...|   GET|    Home|1500655861284|     1002|                null|   200|1513749525284|"Mozilla/5.0 (Mac...|  1003|  13|         0|    0|
+|   Wayne Bergeron|Logged In|  Kendale|     F|            1|Robinson|425.89995| free|San Diego-Carlsba...|   PUT|NextSong|1500655861284|     1002|         The Hipster|   200|1513749516284|"Mozilla/5.0 (Mac...|  1003|  13|         0|    0|
+|             null|Logged In|  Kendale|     F|            0|Robinson|     null| free|San Diego-Carlsba...|   GET|    Home|1500655861284|     1002|                null|   200|1513749501284|"Mozilla/5.0 (Mac...|  1003|  13|         0|    0|
+|    Blank & Jones|Logged In|     Ryan|     M|            0|Carrillo|245.86404| free|    Bend-Redmond, OR|   PUT|NextSong|1475799838284|     4250|      Nuits Blanches|   200|1513782278284|Mozilla/5.0 (Wind...|  1005|  23|         0|    0|
+|  Nine Inch Nails|Logged In|    Bryce|     M|            2|   Simon|340.16608| free|New York-Newark-J...|   PUT|NextSong|1512533018284|     1005| Where Is Everybody?|   200|1513774019284|"Mozilla/5.0 (Mac...|  1006|  20|         0|    0|
+|Silversun Pickups|Logged In|    Bryce|     M|            1|   Simon|242.12853| free|New York-Newark-J...|   PUT|NextSong|1512533018284|     1005|Well Thought Out ...|   200|1513773777284|"Mozilla/5.0 (Mac...|  1006|  20|         0|    0|
+|        The Shins|Logged In|    Bryce|     M|            0|   Simon|229.14567| free|New York-Newark-J...|   PUT|NextSong|1512533018284|     1005|A Comet Appears (...|   200|1513773548284|"Mozilla/5.0 (Mac...|  1006|  20|         0|    0|
+|        Sam Cooke|Logged In| Jamarian|     M|            5|   Moore|122.04363| free|San Diego-Carlsba...|   PUT|NextSong|1497924129284|     6987|    Ain't Misbehavin|   200|1513822643284|Mozilla/5.0 (Wind...|  1017|  10|         0|    0|
+|             null|Logged In| Jamarian|     M|            4|   Moore|     null| free|San Diego-Carlsba...|   GET|    Home|1497924129284|     6987|                null|   200|1513822400284|Mozilla/5.0 (Wind...|  1017|  10|         0|    0|
++-----------------+---------+---------+------+-------------+--------+---------+-----+--------------------+------+--------+-------------+---------+--------------------+------+-------------+--------------------+------+----+----------+-----+
+only showing top 20 rows
+
++------+---------+-------------+--------+-----+-----+
+|userId|firstname|           ts|    page|level|phase|
++------+---------+-------------+--------+-----+-----+
+|  1138|    Kelly|1513729066284|    Home| paid|    1|
+|  1138|    Kelly|1513729066284|NextSong| paid|    1|
+|  1138|    Kelly|1513729313284|NextSong| paid|    1|
+|  1138|    Kelly|1513729552284|NextSong| paid|    1|
+|  1138|    Kelly|1513729783284|NextSong| paid|    1|
+|  1138|    Kelly|1513730001284|NextSong| paid|    1|
+|  1138|    Kelly|1513730263284|NextSong| paid|    1|
+|  1138|    Kelly|1513730518284|NextSong| paid|    1|
+|  1138|    Kelly|1513730768284|NextSong| paid|    1|
+|  1138|    Kelly|1513731182284|NextSong| paid|    1|
+|  1138|    Kelly|1513731435284|NextSong| paid|    1|
+|  1138|    Kelly|1513731695284|NextSong| paid|    1|
+|  1138|    Kelly|1513731857284|NextSong| paid|    1|
+|  1138|    Kelly|1513732160284|NextSong| paid|    1|
+|  1138|    Kelly|1513732302284|NextSong| paid|    1|
+|  1138|    Kelly|1513732540284|NextSong| paid|    1|
+|  1138|    Kelly|1513732770284|NextSong| paid|    1|
+|  1138|    Kelly|1513732994284|NextSong| paid|    1|
+|  1138|    Kelly|1513733223284|NextSong| paid|    1|
+|  1138|    Kelly|1513733456284|NextSong| paid|    1|
++------+---------+-------------+--------+-----+-----+
+only showing top 20 rows
