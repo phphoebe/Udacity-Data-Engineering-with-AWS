@@ -1,7 +1,6 @@
 # Data Wrangling with DataFrames Extra Tips (Notes)
 
 ## Extra Tips for Working With PySpark DataFrame Functions
-We've used a number of functions to manipulate our dataframe. Let's take a look at the different type of functions and their potential pitfalls.
 
 ### General functions
 We have used the following general functions that are quite similar to methods of pandas dataframes:
