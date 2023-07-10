@@ -1,6 +1,13 @@
-# Data Wrangling with DataFrames Extra Tips (Notes)
+# Lesson Summary
 
-## Extra Tips for Working With PySpark DataFrame Functions
+This lesson covered: 
+* How the Spark DAG enables parallel processing of large datasets
+* How to use Map and Lambda Spark functions
+* How to wrangle data with SparkSQL and Spark DataFrames
+
+In the next lessons, we'll explore how to run Spark code at scale on a cloud platform.
+___
+## Data Wrangling with PySpark DataFrames Functions (notes)
 
 ### General functions
 We have used the following general functions that are quite similar to methods of pandas dataframes:
