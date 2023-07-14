@@ -21,7 +21,7 @@ Dive into how to use Spark for wrangling, filtering, and transforming distribute
 * Use the Spark RDDs API to wrangle data 
 * Transform and filter data with Spark
 
-## Lesson 4 - Using Spark in AWS
+## [Lesson 4 - Using Spark in AWS](./L4-using-spark-in-aws/)
 Learn to use Spark and work with data lakes with Amazon Web Services using S3, AWS Glue, and AWS Glue Studio 
 * Use distributed data storage with Amazon S3
 * Identify properties of AWS S3 data lakes
