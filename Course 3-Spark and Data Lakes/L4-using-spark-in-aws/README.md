@@ -526,7 +526,7 @@ _Now we have the data that we need to process in the landing zone. The next step
 * Select `ETL jobs` from the Glue Studio menu
 * To get started, go with the default selection - `Visual with a source and a target`, and click `Create`
 
-    <img src="./images/6-aws_glue_studio_jobs.png" width=80% height=70%>
+    <img src="./images/6-aws_glue_studio_jobs.png" width=90% height=80%>
 
 
 1. **Data Source** 
@@ -552,7 +552,7 @@ _Now we have the data that we need to process in the landing zone. The next step
     <img src="./images/9-transform_privacy_filter.png" width=80% height=70%>
 
 3. **Target**
-    * Name: Trusted Customer Zone
+    * Name: `Trusted Customer Zone`
     * specify the destination `s3://dend-lake-house/customer/trusted/`
 
     <img src="./images/10-target_destination.png" width=80% height=70%>
