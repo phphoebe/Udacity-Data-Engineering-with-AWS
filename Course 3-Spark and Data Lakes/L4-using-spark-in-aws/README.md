@@ -215,7 +215,10 @@ To create an S3 bucket use the `aws s3 mb` command: `aws s3 mb s3://_______`
 ### Step 4: Create an S3 Gateway Endpoint
 
 Finally create the S3 Gateway, replacing the blanks with the `VPC ID` and `Routing Table ID`:
-`aws ec2 create-vpc-endpoint --vpc-id _______ --service-name com.amazonaws.us-east-1.s3 --route-table-ids _______`
+
+```sh
+aws ec2 create-vpc-endpoint --vpc-id _______ --service-name com.amazonaws.us-east-1.s3 --route-table-ids _______
+```
 
 * Command:
 ```sh
@@ -507,7 +510,7 @@ _To create a Trusted Zone for customer data. This zone will contain JSON data fo
     aws s3 ls s3://dend-lake-house/customer/landing/
     ```
 
-    <img src="./images/5-aws_s3_ls.png" width=50% height=30%>
+    <img src="./images/5-aws_s3_ls.png" width=60% height=40%>
 
 * _if needed, use the `aws s3 rm` command for remove to delete the file that no longer need, for example:_ 
     ```sh
@@ -568,8 +571,8 @@ _Now we have the data that we need to process in the landing zone. The next step
     * click `Save` and `Run`
     * click on the `Runs` page and see the status and logs
 
-   <img src="./images/12-job_run_updated.png" width=80% height=70%>
-   <img src="./images/13-job_succeeded.png" width=80% height=70%>
+   <img src="./images/12-job_run_updated.png" width=90% height=80%>
+   <img src="./images/13-job_succeeded.png" width=90% height=80%>
 
 #### View the Generated Script
 
