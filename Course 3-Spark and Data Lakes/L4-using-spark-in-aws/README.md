@@ -535,9 +535,9 @@ _Now we have the data that we need to process in the landing zone. The next step
     * the data format is JSON
     * click on `infer schema`, the Glue job is going to look at the JSON data as a sample and find the fields in the JSON
 
-    <img src="./images/7-source.png" width=80% height=70%>
+        <img src="./images/7-source.png" width=80% height=70%>
 
-    <img src="./images/8-infer_schema_json.png" width=80% height=70%>
+        <img src="./images/8-infer_schema_json.png" width=80% height=70%>
 
 2. **Transform**
 
@@ -557,7 +557,7 @@ _Now we have the data that we need to process in the landing zone. The next step
     * Name: `Trusted Customer Zone`
     * specify the destination `s3://dend-lake-house/customer/trusted/`
 
-    <img src="./images/10-target_destination.png" width=80% height=70%>
+        <img src="./images/10-target_destination.png" width=80% height=70%>
 
     * we can also check in the Cloud Shell: 
 
@@ -574,8 +574,8 @@ _Now we have the data that we need to process in the landing zone. The next step
     * click `Save` and `Run`
     * click on the `Runs` page and see the status and logs
 
-   <img src="./images/12-job_run_updated.png" width=90% height=80%>
-   <img src="./images/13-job_succeeded.png" width=90% height=80%>
+        <img src="./images/12-job_run_updated.png" width=90% height=80%>
+        <img src="./images/13-job_succeeded.png" width=90% height=80%>
 
 #### View the Generated Script
 
