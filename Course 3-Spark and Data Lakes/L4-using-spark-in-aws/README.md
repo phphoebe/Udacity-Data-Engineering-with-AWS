@@ -73,16 +73,16 @@ Choices to rent a cluster of machines on AWS to run Spark:
 We'll focus on using the AWS Glue tool to run Spark scripts in this course.
 
 
-### _Circling Back on HDFS_
+#### _Circling Back on HDFS_
 Since Spark does not have its own distributed storage system, it leverages using `HDFS` or `AWS S3`, or any other distributed storage. Primarily in this course, we will be using AWS S3. 
 
-### _MapReduce System_
+#### _MapReduce System_
 * HDFS uses MapReduce system as a resource manager to allow the distribution of the files across the **hard drives** within the cluster. 
 * Spark, on the other hand, runs the operations and holds the data in the **RAM memory** rather than the hard drives used by HDFS. 
 
 _Since Spark lacks a file distribution system to organize, store and process data files, Spark tools are often installed on Hadoop because Spark can then use the Hadoop Distributed File System (HDFS)._
 
-### _Why Would You Use an EMR Cluster?_
+#### _Why Would You Use an EMR Cluster?_
 * Since a Spark cluster includes multiple machines, in order to use Spark code on each machine, we would need to download and install Spark and its dependencies. 
 * AWS EMR negates the need users to go through the manual process of installing Spark and its dependencies for each machine.
 
@@ -513,6 +513,7 @@ _To create a Trusted Zone for customer data. This zone will contain JSON data fo
     <img src="./images/5-aws_s3_ls.png" width=60% height=40%>
 
 * _if needed, use the `aws s3 rm` command for remove to delete the file that no longer need, for example:_ 
+
     ```sh
     aws s3 rm s3://dend-lake-house/customer/landing/file-name.json
     ```
@@ -544,9 +545,10 @@ _Now we have the data that we need to process in the landing zone. The next step
 
     * change the node type from `Apply Mapping` to `Filter` and change the node name to `PrivacyFilter`
     * add a condition to filter for the ones that have a non-empty consent date: 
-    ```sh
-    shareWithResearchAsOfDate != 0 
-    ```
+
+        ```sh
+        shareWithResearchAsOfDate != 0 
+        ```
     _The `shareWithResearchAsOfDate` timestamp field will be cast as a `zero` if it is empty (a customer didn't give consent)_
 
     <img src="./images/9-transform_privacy_filter.png" width=80% height=70%>
@@ -558,9 +560,10 @@ _Now we have the data that we need to process in the landing zone. The next step
     <img src="./images/10-target_destination.png" width=80% height=70%>
 
     * we can also check in the Cloud Shell: 
-    ```sh
-    aws s3 ls s3://dend-lake-house/customer/trusted/
-    ```
+
+        ```sh
+        aws s3 ls s3://dend-lake-house/customer/trusted/
+        ```
 
 * Click on `Job details`
     * give it a descriptive name - `Customer Landing to Trusted`
@@ -650,12 +653,61 @@ ___
 
 ## 13 - Storing and Retrieving Data on the Cloud
 
+#### Using S3 to Read and Write Data
+
+* One of the most common places to store big data sets is Amazon's Simple Storage Service or S3 for short. 
+* Amazon S3 is a safe, easy, and cheap place to store big data: Amazon does all the work of maintaining the hardware, keeping backups, and making sure the data is almost always available.
+* Quiz - Characteristics of AWS S3:  
+    * It's a file storage system that you can access with a bucket, object, and keys
+    * You can access S4 from other AWS services, like EMR or EC2 if you have the same access credentials 
+
+#### Using Glue Dynamic Frames to Read S3
+
+Glue adds the concept of a `Dynamic Frame` to Spark, which is very similar to a `Data Frame`. Data Frames can be converted to Dynamic Frames and vice versa.
+
+#### Using S3 Buckets to Store Data
+
+* S3 stores an object, and when you identify an object, you need to specify a bucket, and key to identify the object. 
+* In Glue jobs, you can still use Spark Data Frames. For example:
+
+    ```python
+    df = spark.read.load(“s3://my_bucket/path/to/file/file.csv”)
+    ```
+
+    * from this code, `s3://my_bucket` is the bucket
+    * `path/to/file/file.csv` is the key for the object
+    * if we’re using spark, and all the objects underneath the bucket have the _**same schema**_, we can do something like: 
+
+        ```python
+        df = spark.read.load(“s3://my_bucket/”)
+        ```
+
+    * This will generate a dataframe of all the objects underneath the `my_bucket` with the same schema.
+    * But if there are conflicts in schema between files, then the DataFrame will not be generated
 
 ___
 
 ## 14 - Differences between HDFS and AWS S3
 
+Since Spark does not have its own distributed storage system, it leverages HDFS or AWS S3, or any other distributed storage.
+
+
+| `AWS S3` | `HDFS` |
+| --- | --- |
+| `AWS S3` is an `object storage system` that stores the data using `key value pairs` | `HDFS` is an `actual distributed file system` that guarantees _fault tolerance_ |
+| Due to the flexibility of location and reduced cost of maintenance, cloud solutions have been more popular. With the extensive services AWS provides, S3 has been a more popular choice than HDFS. | HDFS has traditionally been installed in on-premise systems which had engineers on-site to maintain and troubleshoot the Hadoop Ecosystem, `costing more than storing data in the cloud` |
+| Since `AWS S3 is a binary object store`, it can `store all kinds of formats`, even images and videos.  | HDFS strictly requires a file format - the popular choices are `avro` and `parquet`, which have relatively high compression rates making it useful for storing large datasets. |
+
+* _HDFS achieves fault tolerance by duplicating the same files at 3 different nodes across the cluster by default (it can be configured to reduce or increase this duplication)._
 
 ___
 
 ## 15 - Lesson Review
+
+Learned on S3 and using Spark on AWS:
+* Data Lakes
+* Create and run Spark jobs using Glue Studio
+* Read and Write to Amazon S3 in Glue Studio
+* Leverage Dynamic Frames
+
+
