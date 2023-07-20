@@ -177,7 +177,7 @@ on "accelerometer_landing"."user" = "customer_trusted"."email"
 And this ad-hoc query shows us that we can use that join in a future job to filter data in order to bring `accelerometer_landing` data forward from `landing` to `trusted` or for other purposes. 
 ___
 
-## - Joining with Secondary Tables
+## Joining with Secondary Tables
 
 #### Create an Accelerometer Trusted Zone
 Now that we have the sensitive data in the `accelerometer landing zone`, we can write a glue job that filters the data and moves compliant records into an `accelerometer trusted zone` for later analysis. 
