@@ -28,7 +28,7 @@ Learn to use Spark and work with data lakes with Amazon Web Services using S3, A
 * Identify service options for using Spark in AWS 
 * Configure AWS Glue
 * Create and run Spark Jobs with AWS Glue
-## Lesson 5 - Ingesting and Organizing Data in a Lakehouse 
+## [Lesson 5 - Ingesting and Organizing Data in a Lakehouse](./L5-ingesting-and-organizing-data-in-a-lakehouse/)
 Work with Lakehouse zones. Build and configure these zones in AWS. 
 * Use Spark with AWS Glue to run ELT processes on data of diverse sources, structures, and vintages in lakehouse architecture
 * Create a Glue Data Catalog and Glue Tables

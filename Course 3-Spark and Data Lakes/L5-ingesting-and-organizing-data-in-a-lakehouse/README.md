@@ -139,20 +139,29 @@ Ingest accelerometer data into an S3 bucket and use AWS Athena to query the buck
 aws s3 cp ./accelerometer s3://dend-lake-house/accelerometer/landing/ --recursive
 ```
 <img src="./images/13-ingest_accelerometer.png" width=80% height=30%>
+<img src="./images/13-ingest_accelerometer_2.png" width=80% height=30%>
 
 * Step 2 - Go to Athena, select the database, and create a new table from S3 bucket data
 
     <img src="./images/14-define_glue_table.png" width=70% height=30%>
 
+    * Table name: `accelerometer_landing`
+    * Database configuration - Choose an existing database: `dend`
+    * Dataset - Location of input data set: `s3://dend-lake-house/accelerometer/landing/`
+    * Data format - Table type: `Apache Hive` + File format: `JSON`
+    * Add Column details 
+    * Download DDL SQL from the Preview table query section
+
 * Step 3 - Query Some Sample Data
+
+    ```sql 
+    select * from accelerometer_landing;
+    ```
 
     <img src="./images/15-query_glue_table.png" width=70% height=30%>
 ___
 
-
-## 8 - Exercise: Athena Joins with Glue Catalog
-
-### Exercise Concept 3 - Athena Joins with Glue Catalog
+### [Exercise Concept 3 - Athena Joins with Glue Catalog](./exercises/concept3-athena-joins-with-glue-catalog/)
 
 Query data in lakehouse zones to explore and identify tables and fields you can use for joins, filters, and other transforms to create a trusted zone.
 
@@ -168,13 +177,12 @@ on "accelerometer_landing"."user" = "customer_trusted"."email"
 And this ad-hoc query shows us that we can use that join in a future job to filter data in order to bring `accelerometer_landing` data forward from `landing` to `trusted` or for other purposes. 
 ___
 
-
-## 9 & 10 - Joining with Secondary Tables
+## - Joining with Secondary Tables
 
 #### Create an Accelerometer Trusted Zone
 Now that we have the sensitive data in the `accelerometer landing zone`, we can write a glue job that filters the data and moves compliant records into an `accelerometer trusted zone` for later analysis. 
 
-### Exercise Concept 4 - Spark Glue Joins
+### [Exercise Concept 4 - Spark Glue Joins](./exercises/concept4-spark-glue-joins/)
 Create an Accelerometer Trusted Zone
 
 <img src="./images/16_glue_job_join.png" width=80% height=30%>
@@ -182,5 +190,50 @@ Create an Accelerometer Trusted Zone
 <img src="./images/17-glue_job_target.png" width=80% height=30%>
 
 <img src="./images/18-glue_job_succeed.png" width=80% height=30%>
+
+* Glue Job Script - [accelerometer_trusted_zone.py](./exercises/concept4-spark-glue-joins/accelerometer_trusted_zone.py)
 ___
 
+
+## Streaming Data Analysis
+
+* Spark is intended to process data that was previously generated. It doesn't process data in real time.
+* `Spark Streaming` gives us the option of processing data in near real-time. 
+* Because servers are not always designed to handle large volumes of real-time data, `message brokers` were created. 
+
+#### Message Brokers
+* They are intended to "broker" connections between systems and make near real-time processing of data possible. Examples of message brokers:
+    * `Kafka`
+    * `Simple Queue Services (AWS SQS)`
+    * `Amazon Kinesis`
+* Message brokers don't last forever. The data they store will be deleted from the `Raw Zone`.
+* To keep messages longer, we move them into a `Landing Zone`. This is where the data can be loaded and transformed for later use in the `Trusted` and `Curated Zone`.
+* Glue can load data directly from Kafka or Kinesis. 
+* Using Spark Streaming, we can load data from Message Brokers into a Spark DataFrame or Glue DynamicFrame.
+* We can then join data from the Message Broker with other data sources as part of the streaming job to create Trusted or Curated data.
+* Kafka can be configured to load data into S3 using a Kafka Connector as a Landing Zone, avoiding the need to connect Glue to Kafka directly.
+
+<img src="./images/20-streaming_Data.png" width=60% height=30%>
+
+___
+
+## Data Curation
+
+Data Engineers' job is to prepare high quality data for others to use.
+
+### Curated Data Attributes
+* High quality
+* Filtered for privacy (free of PII)
+* Can be a composition of multiple data sources
+
+We can join multiple trusted data sources, and apply other transformations to create curated data.
+* Clone a Glue Job for Curated Composite - [customer_curated.py](./exercises/concept4-spark-glue-joins/customer_curated.py)
+
+___
+
+## Lesson Review
+
+* Creating and managing zone tables for Lakehouse architecture using AWS Glue
+* Loading data into zone tables using Glue Studio
+* Ingesting sensitive data into a trusted zone
+* How to join, filter, and process data into trusted and curated zone tables
