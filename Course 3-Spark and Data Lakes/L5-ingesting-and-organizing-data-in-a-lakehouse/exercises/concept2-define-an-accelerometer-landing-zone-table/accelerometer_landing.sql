@@ -1,5 +1,6 @@
 CREATE EXTERNAL TABLE IF NOT EXISTS `dend`.`accelerometer_landing` (
   `user` string,
+  `timeStamp` bigint,
   `x` float,
   `y` float,
   `z` float

@@ -38,7 +38,7 @@ CustomerPrivacyFilter_node1689563552518 = Join.apply(
 # Script generated for node Drop Fields
 DropFields_node1689563733947 = DropFields.apply(
     frame=CustomerPrivacyFilter_node1689563552518,
-    paths=["user", "x", "y", "z"],
+    paths=["user", "x", "y", "z", "timestamp"],
     transformation_ctx="DropFields_node1689563733947",
 )
 

@@ -157,8 +157,6 @@ aws s3 cp ./accelerometer s3://dend-lake-house/accelerometer/landing/ --recursiv
     ```sql 
     select * from accelerometer_landing;
     ```
-
-    <img src="./images/15-query_glue_table.png" width=70% height=30%>
 ___
 
 ### [Exercise Concept 3 - Athena Joins with Glue Catalog](./exercises/concept3-athena-joins-with-glue-catalog/)
