@@ -1,13 +1,15 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS `dend`.`customer_trusted` (
-  `customername` string COMMENT 'from deserializer', 
-  `email` string COMMENT 'from deserializer', 
-  `phone` string COMMENT 'from deserializer', 
-  `birthday` string COMMENT 'from deserializer', 
-  `serialnumber` string COMMENT 'from deserializer', 
-  `registrationdate` bigint COMMENT 'from deserializer', 
-  `lastupdatedate` bigint COMMENT 'from deserializer', 
-  `sharewithresearchasofdate` bigint COMMENT 'from deserializer', 
-  `sharewithpublicasofdate` bigint COMMENT 'from deserializer')
+CREATE EXTERNAL TABLE IF NOT EXISTS `dend`.`customer_landing` (
+  `customername` string,
+  `email` string,
+  `phone` string,
+  `birthday` string,
+  `serialnumber` string,
+  `registrationdate` bigint,
+  `lastupdatedate` bigint,
+  `sharewithresearchasofdate` bigint,
+  `sharewithpublicasofdate` bigint,
+  `sharewithfriendsasofdate` bigint
+)
 ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
 WITH SERDEPROPERTIES (
   'ignore.malformed.json' = 'FALSE',
