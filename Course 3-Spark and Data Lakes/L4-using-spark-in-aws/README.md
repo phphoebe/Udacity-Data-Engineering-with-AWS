@@ -494,7 +494,7 @@ _To create a Trusted Zone for customer data. This zone will contain JSON data fo
     ```
 * cd to the project/starter/customer sub-directory:
     ```sh
-    cd cd ./project/starter/customer/
+    cd ./project/starter/customer/
     ```
 * `ls` (output: `customer-keep-1655293787679.json`) 
 * copy that file using the `aws s3 cp` command to a destination which is going to be your S3 bucket:
