@@ -46,7 +46,7 @@ Build a data lake on AWS and a data catalog following the principles of data lak
 4. Ingesting & organizing data in lakehouse architecture on AWS
 
 ### Project
-* Project 3 - STEDI Human Balance Analytics
+* [Project 3 - STEDI Human Balance Analytics](./Course%203-Spark%20and%20Data%20Lakes/Project%203-STEDI%20Human%20Balance%20Analytics/)
 
 
 ## [Course 4 - Automoate Data Pipelines](./Course%204-Automate%20Data%20Pipelines/)
