@@ -39,5 +39,5 @@ Work with Lakehouse zones. Build and configure these zones in AWS.
 * Join and process data into lakehouse zones with Spark and AWS Glue
 
 
-## Project - STEDI Human Balance Analytics 
+## [Project - STEDI Human Balance Analytics](./Project%203-STEDI%20Human%20Balance%20Analytics/)
 Work with sensor data that trains a machine learning model. Load S3 JSON data from a data lake into Athena tables using Spark and AWS Glue. 
