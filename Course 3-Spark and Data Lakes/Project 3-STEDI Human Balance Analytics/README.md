@@ -48,6 +48,8 @@ _**Screenshot of select statements from Athena showing the customer landing data
 _**Glue Job Scripts:**_ 
 * [customer_landing_to_trusted.py](./scrips/customer_landing_to_trusted.py) - _Filter protected PII with Spark in Glue Jobs_
 * [accelerometer_landing_to_trusted_zone.py](./scrips/accelerometer_landing_to_trusted_zone.py) - _Join Privacy tables with Glue Jobs_
+* [step_trainer_landing_to_trusted.py](./scrips/step_trainer_landing_to_trusted.py) - _Populate `step_trainer_trusted` Glue Table that contains the Step Trainer Records data for customers who have accelerometer data and have agreed to share their data for research_
+
 
 _**Use Athena to query Trusted Glue Tables**_ 
 
@@ -62,4 +64,9 @@ _**Use Athena to query Trusted Glue Tables**_
 
 _**Glue Job Scripts:**_ 
 * [customer_trusted_to_curated.py](./scrips/customer_trusted_to_curated.py)
-* [trainer_trusted_to_curated](./scrips/trainer_trusted_to_curated.py)
+* [trainer_trusted_to_curated](./scrips/trainer_trusted_to_curated.py) - _Populate `machine_learning_curated` Glue Table - an aggregated table that has each of the Step Trainer Readings, and the associated accelerometer reading data for the same timestamp, but only for customers who have agreed to share their data_
+
+
+_**Screenshot of all Glue Tables**_ 
+
+<img src="./images/glue_tables.png" width=30% height=50%>
