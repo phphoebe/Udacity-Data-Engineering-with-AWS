@@ -12,6 +12,7 @@ from airflow.operators.postgres_operator import PostgresOperator
 # Use the PostgresOperator to run the LOCATION_TRAFFIC_SQL
 
 
+# sql_statements stored in the udacity.common folder locally
 from udacity.common import sql_statements
 
 
