@@ -66,7 +66,8 @@ Dive into the concept of data pipelines.
 ### Project
 * [Project 4 - Data Pipelines with Airflow](./Course%204-Automate%20Data%20Pipelines/project-4-data-pipelines/)
 
-
-[Program Syllabus](./Data%2BEngineering%2BNanodegree%2BProgram%2BSyllabus.pdf), more information about this program can be found by visiting [Udacity Data Engineering ND](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
+___
 
 <img src="./Certificate.png">
+
+[Program Syllabus](./Data%2BEngineering%2BNanodegree%2BProgram%2BSyllabus.pdf), more information about this program can be found by visiting [Udacity Data Engineering ND](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
