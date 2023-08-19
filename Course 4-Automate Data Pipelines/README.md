@@ -31,5 +31,5 @@ Learn how to build Pipelines with maintainability and resuability in mind. Also 
 * Construct a DAG and custom operator end-to-end
 
 
-## Project - Data Pipelines 
+## [Project 4 - Data Pipelines with Airflow](./project-4-data-pipelines/)
 Work on a music streaming company's data infrastructure by creating and automating a set of data pipelines with Airflow, monitoring and debugging production pipelines.
