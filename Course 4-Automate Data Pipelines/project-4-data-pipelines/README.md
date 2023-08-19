@@ -63,7 +63,7 @@ The source data resides in **S3** and needs to be processed in Sparkify's data w
     Create tables in Redshift
 #### 2. `final_project` DAG overview
 
-<img src="./images/01-final-project-graph.png" width=70% height=50%>
+<img src="./images/01-final-project-graph.png" width=80% height=50%>
 
 #### Operators 
 * `Begin_execution` & `Stop_execution`
@@ -79,7 +79,7 @@ The source data resides in **S3** and needs to be processed in Sparkify's data w
 
     Run data quality checks to ensure no empty tables
 
-### How to Run
+### Execution
 1. Create S3 bucket and copy data from source
 2. Set Up AWS and Airflow Configurations
 3. Run `create_tables` DAG to create tables in Redshift
