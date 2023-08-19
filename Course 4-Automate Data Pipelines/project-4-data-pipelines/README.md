@@ -63,7 +63,7 @@ The source data resides in **S3** and needs to be processed in Sparkify's data w
     Create tables in Redshift
 #### 2. `final_project` DAG overview
 
-<img src="./images/01-final-project-graph.png" width=80% height=50%>
+<img src="./images/01-final-project-graph.png" width=90% height=50%>
 
 #### Operators 
 * `Begin_execution` & `Stop_execution`
