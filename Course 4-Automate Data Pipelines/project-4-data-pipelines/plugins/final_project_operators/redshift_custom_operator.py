@@ -1,5 +1,5 @@
 # Custom Operator to execute multiple SQL statements in SQL file in Redshift
-# reference: https://blog.shellkode.com/airflow-postgresql-operator-to-execute-multiple-sql-statements-dd0d07365667
+# Reference: https://blog.shellkode.com/airflow-postgresql-operator-to-execute-multiple-sql-statements-dd0d07365667
 
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from airflow.models.baseoperator import BaseOperator
